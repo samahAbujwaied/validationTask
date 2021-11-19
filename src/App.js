@@ -12,6 +12,11 @@ function App() {
   };
 
   function checkPassword(e) {
+  
+    if(name=='')
+    {
+      alert("Please enter the name first !!")
+    }
     setPasswred(e.target.value)
   };
 
@@ -19,10 +24,16 @@ function App() {
   function submitResult(e) {
     e.preventDefault();
     console.log('name ', name.toUpperCase());
-    if (name.toUpperCase() == 'ADMIN' && password == '123')
+      
+    if(password.toUpperCase() == 'ADMIN' && name == '123')
+    alert('You have reversed the input')
+    
+    else if (name.toUpperCase() == 'ADMIN' && password == '123')
       alert('Hello admin')
     else
       alert('Validation Error')
+
+     
   }
   console.log(name);
   console.log(password);
